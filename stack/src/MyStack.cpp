@@ -13,7 +13,7 @@ using namespace std;
 MyStack::MyStack(int size)
 {
 	m_iSzie = size;
-	m_pBuffer = new char[size];
+	m_pBuffer = new Coordinate[size];
 	m_iTop = 0;
 }
 
@@ -51,7 +51,7 @@ int MyStack::stackLength()
 	return m_iTop;
 }
 
-bool MyStack::push(char elem)
+bool MyStack::push(Coordinate elem)
 {
 	if(stackFull())
 	{
@@ -74,7 +74,7 @@ bool MyStack::push(char elem)
 //	}
 //}
 
-bool MyStack::pop(char &elem)
+bool MyStack::pop(Coordinate &elem)
 {
 	if(stackEmpty())
 	{
@@ -92,14 +92,16 @@ void MyStack::stackTraverse(bool isFromButtom)
 	{
 		for(int i = 0;i < m_iTop;i++)
 			{
-				cout << m_pBuffer[i] << ",";
+//				cout << m_pBuffer[i] << ",";
+			m_pBuffer[i].printCoordinate();
 			}
 	}
 	else
 	{
 		for(int i = m_iTop-1;i>=0;i--)
 			{
-				cout << m_pBuffer[i]<< ",";
+//				cout << m_pBuffer[i]<< ",";
+			m_pBuffer[i].printCoordinate();
 			}
 	}
 

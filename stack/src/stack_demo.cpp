@@ -13,17 +13,14 @@ using namespace std;
 int main() {
 	MyStack *pStack = new MyStack(5);
 
-	pStack->push('h');  //底
-	pStack->push('e');
-	pStack->push('l');
-	pStack->push('l');
-	pStack->push('o');	//顶
+	pStack->push(Coordinate(1,2));  //底
+	pStack->push(Coordinate(2,3));
+	pStack->push(Coordinate(3,4));
+	pStack->push(Coordinate(4,5));
+	pStack->push(Coordinate(5,6));	//顶
 
 	pStack->stackTraverse(true);
-	char elem = 0;
-	pStack->pop(elem);
-	cout << endl;
-	cout << elem << endl;
+
 
 	pStack->stackTraverse(false);
 //	pStack->clearStack();
