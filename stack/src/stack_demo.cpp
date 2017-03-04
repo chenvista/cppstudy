@@ -8,10 +8,11 @@
 
 #include <iostream>
 #include "MyStack.h"
+#include "Coordinate.h"
 using namespace std;
 
 int main() {
-	MyStack *pStack = new MyStack(5);
+	MyStack<Coordinate> *pStack = new MyStack<Coordinate>(5);
 
 	pStack->push(Coordinate(1,2));  //底
 	pStack->push(Coordinate(2,3));

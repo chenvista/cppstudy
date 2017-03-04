@@ -8,7 +8,12 @@
 #ifndef COORDINATE_H_
 #define COORDINATE_H_
 
+#include <ostream>
+using namespace std;
+
 class Coordinate {
+
+friend ostream &operator<<(ostream &out,Coordinate &coor);
 public:
 	Coordinate(int x=0,int y=0);
 	void printCoordinate();

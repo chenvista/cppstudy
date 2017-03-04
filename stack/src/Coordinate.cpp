@@ -18,3 +18,8 @@ void Coordinate::printCoordinate(){
 	cout << "(" << m_iX <<"," <<m_iY<<")"<< endl;
 }
 
+ostream &operator<<(ostream &out,Coordinate &coor)
+{
+	out << "(" << coor.m_iX << ","<< coor.m_iY <<  ")" << endl;
+	return out;
+}
