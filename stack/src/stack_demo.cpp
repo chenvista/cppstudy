@@ -89,7 +89,7 @@ int main(void){
 
 	char str[]="[[()]])";
 	char currentNeed = 0;
-	for(int i = 0; i<strlen(str); i++)cout << "字符串括号不匹配" <<endl;
+	for(int i = 0;i<strlen(str);i++)
 	{
 		if(str[i] != currentNeed)
 		{
