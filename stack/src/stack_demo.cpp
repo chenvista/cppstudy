@@ -87,7 +87,7 @@ int main(void){
 	MyStack<char> *pNeedStack = new MyStack<char>(30);
 
 
-	char str[]="[[()]])";
+	char str[]="[[()]]";
 	char currentNeed = 0;
 	for(int i = 0;i<strlen(str);i++)
 	{
