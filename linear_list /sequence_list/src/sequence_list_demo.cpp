@@ -8,8 +8,9 @@
 
 #include "List.h"
 #include <iostream>
+#include "Coordinate.h"
 using namespace std;
-
+/*
 int main() {
 	// 3 5 7 2 9 1 8
 	int e1 = 3;
@@ -60,6 +61,23 @@ int main() {
 	list1->NextElem(&e4,&temp);
 	cout <<"temp: " << temp << endl;
 
+	delete list1;
+	return 0;
+}*/
+
+int main(){
+	Coordinate e1(3,5);
+	Coordinate e2(5,7);
+	Coordinate e3(6,8);
+	Coordinate temp(0,0);
+
+	List *list1 = new List(10);
+
+	list1->ListInsert(0,&e1);
+	list1->ListInsert(1,&e2);
+	list1->ListInsert(2,&e3);
+
+	list1->ListTraverse();
 	delete list1;
 	return 0;
 }

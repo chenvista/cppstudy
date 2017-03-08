@@ -10,7 +10,7 @@ using namespace std;
 
 List::List(int size) {
 	m_iSize = size;
-	m_pList = new int[m_iSize];
+	m_pList = new Coordinate[m_iSize];
 	m_iLength = 0;
 
 }
@@ -39,7 +39,7 @@ int List::ListLength(){
 }
 
 
-bool List::GetElem(int i,int *e){
+bool List::GetElem(int i,Coordinate *e){
 	if(i<0||i>=m_iSize)
 	{
 		return false;
@@ -49,7 +49,7 @@ bool List::GetElem(int i,int *e){
 }
 
 
-int List::LocateElem(int *e){
+int List::LocateElem(Coordinate *e){
 	for(int i = 0;i<m_iLength;i++){
 		if(m_pList[i] == *e){
 			return i;
@@ -58,7 +58,7 @@ int List::LocateElem(int *e){
 	return -1;
 }
 
-bool List::PriorElem(int *currentElem,int *preElem){
+bool List::PriorElem(Coordinate *currentElem,Coordinate *preElem){
 	int temp = LocateElem(currentElem);
 	if(temp == -1){
 		return false;
@@ -75,7 +75,7 @@ bool List::PriorElem(int *currentElem,int *preElem){
 }
 
 
-bool List::NextElem(int *currentElem,int *nextElem){
+bool List::NextElem(Coordinate *currentElem,Coordinate *nextElem){
 	int temp = LocateElem(currentElem);
 	if(temp == -1){
 		return false;
@@ -95,11 +95,12 @@ bool List::NextElem(int *currentElem,int *nextElem){
 void List::ListTraverse(){
 	for(int i = 0; i < m_iLength;i++){
 		cout << m_pList[i] << endl;
+		//m_pList[i].printCoordinate();
 	}
 }
 
 
-bool List::ListInsert(int i,int *e){
+bool List::ListInsert(int i,Coordinate *e){
 	if(i<0|| i> m_iLength){
 		return false;
 	}
@@ -111,7 +112,7 @@ bool List::ListInsert(int i,int *e){
 	return true;
 }
 
-bool List::ListDelete(int i,int *e){
+bool List::ListDelete(int i,Coordinate *e){
 	if(i<0 || i >= m_iLength){
 		return false;
 	}
